@@ -16,3 +16,8 @@ btn.addEventListener("click", function () {
   inp.value = "";}
 });
 
+ul.addEventListener("click", function(event) {
+  if(event.target.classList.contains("del")) {
+    event.target.parentElement.remove();
+  }
+});

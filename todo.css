@@ -50,3 +50,14 @@ ul {
 li{
   color:#284a8a;
 }
+.del{
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  background-color: rgb(163, 13, 103);
+  border: none;
+  color: #4aff13;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  cursor: pointer;
+}
