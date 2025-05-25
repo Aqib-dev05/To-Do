@@ -2,11 +2,9 @@ let btn = document.querySelector("#add");
 let inp = document.querySelector("input");
 let ul = document.querySelector("ul");
 
-
-
 // Save tasks to localStorage when adding new task
 btn.addEventListener("click", function () {
-  if(inp.value !=""){
+  if (inp.value != "") {
     let list = document.createElement("li");
     list.innerText = inp.value;
 
@@ -22,11 +20,11 @@ btn.addEventListener("click", function () {
 });
 
 // Load tasks when page loads
-document.addEventListener('DOMContentLoaded', loadTasks);
+document.addEventListener("DOMContentLoaded", loadTasks);
 
 // Handle delete and save
-ul.addEventListener("click", function(event) {
-  if(event.target.classList.contains("del")) {
+ul.addEventListener("click", function (event) {
+  if (event.target.classList.contains("del")) {
     event.target.parentElement.remove();
     saveTasks(); // Save tasks after deletion
   }
@@ -35,16 +33,16 @@ ul.addEventListener("click", function(event) {
 // Function to save tasks
 function saveTasks() {
   const tasks = [];
-  document.querySelectorAll('li').forEach(task => {
+  document.querySelectorAll("li").forEach((task) => {
     tasks.push(task.firstChild.textContent);
   });
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 // Function to load tasks
 function loadTasks() {
-  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  tasks.forEach(task => {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  tasks.forEach((task) => {
     let list = document.createElement("li");
     list.innerText = task;
 
