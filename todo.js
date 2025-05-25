@@ -7,10 +7,10 @@ btn.addEventListener("click", function () {
   let list = document.createElement("li"); //new list
   list.innerText = inp.value; //list text
 
-  // let del = document.createElement("button"); //delete button
-  // del.classList.add("del");
-  // del.innerText = "delete";
-  // list.appendChild(del); //delete nutton append to list
+  let del = document.createElement("button"); //delete button
+  del.classList.add("del");
+  del.innerText = "delete";
+  list.appendChild(del); //delete nutton append to list
 
   ul.append(list); //list append to ul
   inp.value = "";}
